@@ -4,7 +4,7 @@
 
 StellarFlow is an open-source, self-custodial Stellar wallet built as a mobile-first Progressive Web App. It extends what Freighter offers out of the box — adding DEX-powered asset swaps, shareable payment request links, and a recurring payments scheduler that Freighter has no native support for.
 
-Built for the [Stellar Wave Program](https://www.drips.network/wave/stellar) on Drips.
+
 
 ---
 
@@ -173,7 +173,7 @@ networkPassphrase: 'Public Global Stellar Network ; September 2015',
 
 ```ts
 // from:
-`https://stellar.expert/explorer/testnet/tx/${hash}`
+`https://stellar.expert/explorer/public/tx/${hash}`
 // to:
 `https://stellar.expert/explorer/public/tx/${hash}`
 ```

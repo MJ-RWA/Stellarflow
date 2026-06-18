@@ -87,7 +87,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
 
   const signTx = useCallback(async (xdr: string): Promise<string> => {
     const result = await signTransaction(xdr, {
-      networkPassphrase: 'Test SDF Network ; September 2015',
+      networkPassphrase: 'Public Global Stellar Network ; September 2015',
     });
     if (result.error) throw new Error(result.error);
     return result.signedTxXdr;

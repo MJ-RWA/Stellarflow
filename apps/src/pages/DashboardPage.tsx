@@ -65,7 +65,7 @@ export default function DashboardPage() {
           <span className="text-stellar-400 font-display text-xl mb-1">XLM</span>
         </div>
         <a
-          href={`https://stellar.expert/explorer/testnet/account/${address}`}
+          href={`https://stellar.expert/explorer/public/account/${address}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1 text-xs text-stellar-700 hover:text-stellar-400 mt-3 transition-colors"

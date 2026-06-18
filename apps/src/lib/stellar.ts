@@ -1,13 +1,14 @@
 import * as StellarSdk from '@stellar/stellar-sdk';
 import type { Balance, SwapQuote } from '../types';
 
-const HORIZON_URL = 'https://horizon-testnet.stellar.org';
-const NETWORK_PASSPHRASE = StellarSdk.Networks.TESTNET;
+const HORIZON_URL = 'https://horizon.stellar.org';
+const NETWORK_PASSPHRASE = StellarSdk.Networks.PUBLIC;
 
 export const USDC_ASSET = new StellarSdk.Asset(
   'USDC',
-  'GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5'
+  'GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN'
 );
+
 export const XLM_ASSET = StellarSdk.Asset.native();
 export const server = new StellarSdk.Horizon.Server(HORIZON_URL);
 

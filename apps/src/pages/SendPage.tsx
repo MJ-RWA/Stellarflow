@@ -61,7 +61,7 @@ export default function SendPage() {
           <p className="text-stellar-600 font-body text-sm mb-6">Your transaction was submitted.</p>
           <p className="font-mono text-xs text-stellar-700 break-all mb-6 p-3 bg-ink rounded-xl">{txHash}</p>
           <a
-            href={`https://stellar.expert/explorer/testnet/tx/${txHash}`}
+            href={`https://stellar.expert/explorer/public/tx/${txHash}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary block mb-3"

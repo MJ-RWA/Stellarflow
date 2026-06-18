@@ -171,7 +171,7 @@ networkPassphrase: 'Public Global Stellar Network ; September 2015',
 
 ```ts
 // from:
-`https://stellar.expert/explorer/testnet/tx/${hash}`
+`https://stellar.expert/explorer/public/tx/${hash}`
 // to:
 `https://stellar.expert/explorer/public/tx/${hash}`
 ```

@@ -59,7 +59,7 @@ export default function PayPage() {
           <p className="text-stellar-600 font-body text-sm mb-4">Your payment was sent.</p>
           <p className="font-mono text-xs text-stellar-700 break-all p-3 bg-ink rounded-xl mb-6">{txHash}</p>
           <a
-            href={`https://stellar.expert/explorer/testnet/tx/${txHash}`}
+            href={`https://stellar.expert/explorer/public/tx/${txHash}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary block"

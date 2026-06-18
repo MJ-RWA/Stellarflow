@@ -235,7 +235,7 @@ export default function SchedulePage() {
                         </div>
                         {log.hash && (
                           <a
-                            href={`https://stellar.expert/explorer/testnet/tx/${log.hash}`}
+                            href={`https://stellar.expert/explorer/public/tx/${log.hash}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-stellar-600 hover:text-stellar-400 text-xs font-mono underline"

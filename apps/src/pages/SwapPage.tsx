@@ -84,7 +84,7 @@ export default function SwapPage() {
           <CheckCircle size={48} className="text-stellar-400 mx-auto mb-4" />
           <h2 className="font-display text-2xl font-bold text-white mb-2">Swapped!</h2>
           <p className="font-mono text-xs text-stellar-700 break-all mb-6 p-3 bg-ink rounded-xl">{txHash}</p>
-          <a href={`https://stellar.expert/explorer/testnet/tx/${txHash}`} target="_blank" rel="noopener noreferrer" className="btn-primary block mb-3">
+          <a href={`https://stellar.expert/explorer/public/tx/${txHash}`} target="_blank" rel="noopener noreferrer" className="btn-primary block mb-3">
             View on Explorer
           </a>
           <button onClick={() => setTxHash(null)} className="text-stellar-600 hover:text-stellar-400 text-sm">
