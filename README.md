@@ -45,50 +45,51 @@ Schedule automatic XLM or USDC transfers on a daily, weekly, or monthly basis. E
 ## Project Structure
 
 ```
-stellarflow/
-├── src/
-│   ├── App.tsx                        # Root router and layout
-│   ├── main.tsx                       # React entry point
-│   ├── index.css                      # Global styles + Tailwind
-│   │
-│   ├── context/
-│   │   └── WalletContext.tsx          # Freighter wallet state (connect, sign, disconnect)
-│   │
-│   ├── hooks/
-│   │   ├── useBalances.ts             # Fetches + auto-refreshes account balances
-│   │   └── useScheduler.ts            # Polls for due recurring payments and executes them
-│   │
-│   ├── lib/
-│   │   ├── stellar.ts                 # Core Stellar logic: build/submit txs, swap quotes, payment links
-│   │   └── scheduler.ts               # localStorage CRUD for scheduled payments + time helpers
-│   │
-│   ├── components/
-│   │   ├── AssetBadge.tsx             # XLM / USDC visual badge component
-│   │   ├── BottomNav.tsx              # Mobile navigation bar (5 tabs)
-│   │   └── ProtectedRoute.tsx         # Redirects to connect page if wallet not connected
-│   │
-│   ├── pages/
-│   │   ├── ConnectPage.tsx            # Landing page — Freighter connect flow
-│   │   ├── DashboardPage.tsx          # Portfolio overview + quick actions
-│   │   ├── SendPage.tsx               # Send XLM or USDC
-│   │   ├── SwapPage.tsx               # DEX swap with live quote + route display
-│   │   ├── RequestPage.tsx            # Generate payment request link + QR code
-│   │   ├── PayPage.tsx                # Handles incoming /pay?... links
-│   │   ├── SchedulePage.tsx           # Recurring payments manager
-│   │   └── QRCode.tsx                 # Canvas-based QR code renderer
-│   │
-│   └── types/
-│       └── index.ts                   # Shared TypeScript interfaces
-│
-├── public/
-├── index.html
-├── tailwind.config.js
-├── vite.config.ts
-├── tsconfig.json
-└── package.json
-```
+stellar-flow/
+├── apps/
+ ├── src/
+ │   ├── App.tsx                        # Root router and layout
+ │   ├── main.tsx                       # React entry point
+ │   ├── index.css                      # Global styles + Tailwind
+ │   │
+ │   ├── context/
+ │   │   └── WalletContext.tsx          # Freighter wallet state (connect, sign, disconnect)
+ │   │
+ │   ├── hooks/
+ │   │   ├── useBalances.ts             # Fetches + auto-refreshes account balances
+ │   │   └── useScheduler.ts            # Polls for due recurring payments and executes them
+ │   │
+ │   ├── lib/
+ │   │   ├── stellar.ts                 # Core Stellar logic: build/submit txs, swap quotes, payment links
+ │   │   └── scheduler.ts               # localStorage CRUD for scheduled payments + time helpers
+ │   │
+ │   ├── components/
+ │   │   ├── AssetBadge.tsx             # XLM / USDC visual badge component
+ │   │   ├── BottomNav.tsx              # Mobile navigation bar (5 tabs)
+ │   │   └── ProtectedRoute.tsx         # Redirects to connect page if wallet not connected
+ │   │
+ │   ├── pages/
+ │   │   ├── ConnectPage.tsx            # Landing page — Freighter connect flow
+ │   │   ├── DashboardPage.tsx          # Portfolio overview + quick actions
+ │   │   ├── SendPage.tsx               # Send XLM or USDC
+ │   │   ├── SwapPage.tsx               # DEX swap with live quote + route display
+ │   │   ├── RequestPage.tsx            # Generate payment request link + QR code
+ │   │   ├── PayPage.tsx                # Handles incoming /pay?... links
+ │    │   ├── SchedulePage.tsx           # Recurring payments manager
+ │   │   └── QRCode.tsx                 # Canvas-based QR code renderer
+ │   │
+ │   └── types/
+ │       └── index.ts                   # Shared TypeScript interfaces
+ │
+ ├── public/
+ ├── index.html
+ ├── tailwind.config.js
+ ├── vite.config.ts
+ ├── tsconfig.json
+ └── package.json
+ ```
 
----
+ ---
 
 ## Getting Started
 
@@ -102,7 +103,8 @@ stellarflow/
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/stellarflow.git
-cd stellarflow
+cd stellar-flow
+cd apps
 npm install
 npm run dev
 ```
