@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #0a0f14;
+  color: #e8f4f6;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0f1923; }
+::-webkit-scrollbar-thumb { background: #2b9bae; border-radius: 2px; }
+
+.glass {
+  background: rgba(22, 32, 48, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(43, 155, 174, 0.15);
+}
+
+.glow {
+  box-shadow: 0 0 40px rgba(43, 155, 174, 0.12);
+}
+
+.btn-primary {
+  @apply bg-stellar-500 hover:bg-stellar-400 text-white font-display font-600 px-6 py-3 rounded-xl transition-all duration-200 active:scale-95;
+}
+
+.input-field {
+  @apply bg-card border border-border rounded-xl px-4 py-3 text-white placeholder-stellar-800 font-body focus:outline-none focus:border-stellar-500 transition-colors w-full;
+}
+
+.nav-tab {
+  @apply flex flex-col items-center gap-1 py-2 px-3 rounded-xl transition-all duration-200 cursor-pointer;
+}
+
+.nav-tab.active {
+  @apply text-stellar-400;
+}
+
+.nav-tab:not(.active) {
+  @apply text-stellar-700 hover:text-stellar-500;
+}
+
+@layer utilities {
+  .font-600 { font-weight: 600; }
+}
