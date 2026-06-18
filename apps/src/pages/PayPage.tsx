@@ -111,7 +111,7 @@ export default function PayPage() {
         </button>
 
         <p className="text-center text-xs text-stellar-800 mt-4 font-body">
-          Powered by Stellar Testnet
+          Powered by Stellar Mainnet
         </p>
       </div>
     </div>

@@ -38,7 +38,7 @@ Schedule automatic XLM or USDC transfers on a daily, weekly, or monthly basis. E
 | Blockchain SDK | `@stellar/stellar-sdk` v15 |
 | Notifications | react-hot-toast |
 | Icons | lucide-react |
-| Network | Stellar Testnet (mainnet-ready) |
+| Network | Stellar Mainnet |
 
 ---
 

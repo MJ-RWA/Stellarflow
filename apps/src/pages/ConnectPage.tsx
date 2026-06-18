@@ -48,7 +48,7 @@ export default function ConnectPage() {
           <br />on the Stellar network.
         </p>
         <div className="text-xs text-stellar-700 font-mono mb-12 px-3 py-1 rounded-full border border-border">
-          TESTNET
+          Mainnet
         </div>
 
         {/* Feature pills */}
@@ -107,7 +107,7 @@ export default function ConnectPage() {
           >
             Install it here
           </a>
-          {' '}· Switch to Testnet in Freighter settings.
+          {' '}· Switch to Mainnet in Freighter settings.
         </p>
       </div>
     </div>
