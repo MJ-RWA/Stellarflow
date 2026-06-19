@@ -102,9 +102,18 @@ stellar-flow/
 ### Install and run
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/stellarflow.git
+# 1. Fork the repo first
+# Go to https://github.com/YOUR_USERNAME/stellarflow and click "Fork"
+
+# 2. Clone YOUR fork (not the original)
+git clone https://github.com/YOUR_GITHUB_USERNAME/stellarflow.git
 cd stellar-flow
 cd apps
+
+# 3. Add the original as upstream (to pull future updates)
+git remote add upstream https://github.com/MJ-RWA/stellarflow.git
+
+# 4. Install and run
 npm install
 npm run dev
 ```
