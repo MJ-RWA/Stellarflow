@@ -20,7 +20,7 @@ code_generation:
     language: "en-US"
 
 path_instructions:
-  - path: "src/lib/stellar.ts"
+  - path: "apps/src/lib/stellar.ts"
     instructions: |
       This file contains all Stellar SDK logic. Check that:
       - Transactions are always built with setTimeout(180)
@@ -28,7 +28,7 @@ path_instructions:
       - All async functions have try/catch
       - No hardcoded network passphrases outside NETWORK_PASSPHRASE constant
 
-  - path: "src/pages/**"
+  - path: "apps/src/pages/**"
     instructions: |
       These are React pages. Check that:
       - No inline style props — Tailwind classes only
@@ -36,20 +36,20 @@ path_instructions:
       - Loading states handled for all async operations
       - Mobile responsive (no fixed widths that break at 390px)
 
-  - path: "src/context/WalletContext.tsx"
+  - path: "apps/src/context/WalletContext.tsx"
     instructions: |
       Freighter wallet integration. Check that:
       - requestAccess() is called for first-time connections, not getAddress()
       - signTransaction uses the correct network passphrase
       - Wallet state is properly reset on disconnect
 
-  - path: "src/hooks/**"
+  - path: "apps/src/hooks/**"
     instructions: |
       Custom hooks. Check that:
       - Every useEffect that sets up a subscription returns a cleanup function
       - No infinite loops from missing or incorrect dependency arrays
 
-  - path: "scripts/**"
+  - path: "apps/scripts/**"
     instructions: |
       Node.js CLI scripts. Check that:
       - Scripts validate all inputs before processing
