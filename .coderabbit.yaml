@@ -1,0 +1,57 @@
+language: "en-US"
+
+reviews:
+  profile: "chill"           # assertive = strict, chill = friendly
+  request_changes_workflow: false  # suggests but doesn't block merge
+  high_level_summary: true   # adds a plain-English summary at top of review
+  poem: false                # disables the poem it adds (optional)
+  review_status: true        # posts a status when review starts
+  auto_review:
+    enabled: true
+    drafts: false            # skip draft PRs
+    base_branches:
+      - main
+
+chat:
+  auto_reply: true           # CodeRabbit replies to comments automatically
+
+code_generation:
+  docstrings:
+    language: "en-US"
+
+path_instructions:
+  - path: "src/lib/stellar.ts"
+    instructions: |
+      This file contains all Stellar SDK logic. Check that:
+      - Transactions are always built with setTimeout(180)
+      - submitTx uses fetch directly to POST XDR, never server.submitTransaction()
+      - All async functions have try/catch
+      - No hardcoded network passphrases outside NETWORK_PASSPHRASE constant
+
+  - path: "src/pages/**"
+    instructions: |
+      These are React pages. Check that:
+      - No inline style props — Tailwind classes only
+      - All errors shown via toast.error(), never alert()
+      - Loading states handled for all async operations
+      - Mobile responsive (no fixed widths that break at 390px)
+
+  - path: "src/context/WalletContext.tsx"
+    instructions: |
+      Freighter wallet integration. Check that:
+      - requestAccess() is called for first-time connections, not getAddress()
+      - signTransaction uses the correct network passphrase
+      - Wallet state is properly reset on disconnect
+
+  - path: "src/hooks/**"
+    instructions: |
+      Custom hooks. Check that:
+      - Every useEffect that sets up a subscription returns a cleanup function
+      - No infinite loops from missing or incorrect dependency arrays
+
+  - path: "scripts/**"
+    instructions: |
+      Node.js CLI scripts. Check that:
+      - Scripts validate all inputs before processing
+      - process.exit(1) used on errors with clear messages
+      - No hardcoded addresses or API keys
