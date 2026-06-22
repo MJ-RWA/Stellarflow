@@ -5,6 +5,7 @@ import { buildSendTx, submitTx, USDC_ASSET } from '../lib/stellar';
 import AssetBadge from '../components/AssetBadge';
 import toast from 'react-hot-toast';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import {AddressInput} from '../components/AddressInput'
 
 const ASSETS = [
   { code: 'XLM', label: 'Stellar Lumens' },
@@ -112,11 +113,11 @@ export default function SendPage() {
         <label className="text-stellar-600 text-xs font-display font-600 uppercase tracking-widest block mb-2">
           Destination Address
         </label>
-        <input
-          className="input-field font-mono text-sm"
-          placeholder="G..."
+        <AddressInput
           value={destination}
-          onChange={e => setDestination(e.target.value)}
+          onChange={setDestination}
+          placeholder="G..."
+          className="font-mono text-sm"
         />
       </div>
 
