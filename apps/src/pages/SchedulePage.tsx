@@ -13,6 +13,7 @@ import {
   XCircle, ChevronDown, ChevronUp, Loader2,
 } from 'lucide-react';
 import type { ScheduledPayment } from '../types';
+import {AddressInput} from '../components/AddressInput'
 
 const FREQUENCIES: ScheduledPayment['frequency'][] = ['daily', 'weekly', 'monthly'];
 const ASSETS = ['XLM', 'USDC'];
@@ -104,8 +105,13 @@ export default function SchedulePage() {
 
             <div>
               <label className="text-stellar-600 text-xs font-display uppercase tracking-widest block mb-1">To Address</label>
-              <input className="input-field font-mono text-sm" placeholder="G..." value={destination} onChange={e => setDestination(e.target.value)} />
-            </div>
+              <AddressInput 
+                value={destination} 
+                onChange={setDestination} 
+                placeholder="G..."
+                className="font-mono text-sm"
+              />           
+               </div>
 
             <div className="flex gap-2">
               <div className="flex-1">
